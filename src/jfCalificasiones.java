@@ -10,6 +10,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import utils.WindowsUtils;
 
 public class jfCalificasiones extends javax.swing.JFrame {
 
@@ -490,22 +491,25 @@ public class jfCalificasiones extends javax.swing.JFrame {
         datos dat = new datos();
         //lblPeApe.setText(ape.getApellido());
         generarPDF pdf = new generarPDF();
+        WindowsUtils wu = new WindowsUtils();
+        String ruta = wu.getCurrentUserDesktopPath();
+        String rutaEscritorio = ruta.replace('\\', '/');
         pdf.generarPDF("Evaluation",
-                "Calificasiones de " + dat.getNombre() + " " + dat.getApellido() + "\n"+ "Semestre: " + dat.getNoSemestre() + "   Grupo: " + dat.getItemGrupo() + "\n" + "\n" + "\n",
+                "Calificasiones de " + dat.getNombre() + " " + dat.getApellido() + "\n" + "Semestre: " + dat.getNoSemestre() + "   Grupo: " + dat.getItemGrupo() + "\n" + "\n" + "\n",
                 "Inglés:                                      " + e.getInglesCal() + "\n"
                 + "Matemáticas Discretas:                       " + e.getMateCal() + "\n"
                 + "Física:                                      " + e.getFisicaCal() + "\n"
                 + "Progrmación Orientada a Objetos:             " + e.getPOOCal() + "\n"
                 + "Contabilidad:                                " + e.getContabilidadCal() + "\n"
-                + "Admin. de los Re. y F. I.:                   " + e.getAdministracion()+ "\n"
+                + "Admin. de los Re. y F. I.:                   " + e.getAdministracion() + "\n"
                 + "Cálculo Integral:                            " + e.getCalculoCal() + "\n" + "\n" + "\n",
                 "Sin otro particular y con la seguridad de seguir contando con su apoyo en el esfuerzo brindar una mejor educación, reciba un cordeal saludo.\n",
                 "Evaluation version: 1.0. Prohibida su reproducción parcial o total. \n Todos los derechos reservados." + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n",
                 "Firma y nombre del alumno" + "\n" + "_____________________________" + "\n" + dat.getNombre() + " " + dat.getApellido() + " " + dat.getNoControl(),
-                "C:/Users/user/Documents/NetBeansProjects/Professional_Exam/src/Images/PC.png",
-                "C:/Users/user/Desktop/" + dat.getNombre() + "_" + dat.getApellido() + "_" + dat.getNoControl() + ".pdf");
+                "src/Images/PC.png",
+                rutaEscritorio + "/" + dat.getNombre() + "_" + dat.getApellido() + "_" + dat.getNoControl() + ".pdf");
 
-        JOptionPane.showMessageDialog(null, "¡Guardado!" + "\n" + "C:/Users/user/Desktop/" + dat.getNombre() + "_" + dat.getApellido() + "_" + dat.getNoControl() + ".pdf" + "\n" + "(Escritorio)");
+        JOptionPane.showMessageDialog(null, "¡Guardado!" + "\n" + rutaEscritorio + "/" + dat.getNombre() + "_" + dat.getApellido() + "_" + dat.getNoControl() + ".pdf" + "\n" + "(Escritorio)");
         btnImprimir.setEnabled(true);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -516,7 +520,10 @@ public class jfCalificasiones extends javax.swing.JFrame {
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         datos dat = new datos();
         Imprimir d = new Imprimir();
-        d.Imprimir("C:/Users/user/Desktop/" + dat.getNombre() + "_" + dat.getApellido() + "_" + dat.getNoControl() + ".pdf");
+        WindowsUtils wu = new WindowsUtils();
+        String ruta = wu.getCurrentUserDesktopPath();
+        String rutaEscritorio = ruta.replace('\\', '/');
+        d.Imprimir(rutaEscritorio + "/" + dat.getNombre() + "_" + dat.getApellido() + "_" + dat.getNoControl() + ".pdf");
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**

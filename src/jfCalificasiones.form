@@ -177,9 +177,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnGraficar">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/Grafica.png"/>
             </Property>
@@ -196,7 +193,6 @@
               <Color id="Cursor de Mano"/>
             </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
-            <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGraficarActionPerformed"/>
@@ -204,9 +200,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnGuardar">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/salvar.png"/>
             </Property>
@@ -223,7 +216,6 @@
               <Color id="Cursor de Mano"/>
             </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
-            <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
@@ -395,9 +387,6 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="18" style="1"/>
             </Property>
